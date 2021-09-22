@@ -17,8 +17,8 @@ public class Main : MonoBehaviour
     public WeaponDefinition[] weaponDefinitions;
     public GameObject prefabPowerUp;
     public WeaponType[] powerUpFrequency = new WeaponType[] {
-                        WeaponType.blaster, WeaponType.blaster,
-                        WeaponType.spread, WeaponType.shield };
+           WeaponType.blaster, WeaponType.blaster,
+           WeaponType.spread, WeaponType.shield };
 
     private BoundsCheck bndCheck;
 

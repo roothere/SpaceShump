@@ -116,9 +116,11 @@ public class Hero : MonoBehaviour
         }
     }
 
-    Weapon GetEmptyWeaponSlot() {
+    Weapon GetEmptyWeaponSlot()
+    {
+        int maxWeapons = Main.GetWeaponDefinition(weapons[0].type).maxWeapons;
         for (int i = 0; i < weapons.Length; i++) {
-            if (weapons[i].type ==  WeaponType.none) {
+            if (weapons[i].type == WeaponType.none && maxWeapons > i) {
                 return (weapons[i]);
             }
         }

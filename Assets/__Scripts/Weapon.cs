@@ -30,14 +30,15 @@ public class WeaponDefinition {
     public GameObject       projectilePrefab;
     public Color            projectileColor = Color.white;
     public float            damageOnHit = 0;
-    public float            continousDamage = 0;
+    public float            continuousDamage = 0;
 
     public float            delayBetweenShots = 0;
     public float            velocity = 20;
+    public int              maxWeapons = 5;
 }
 public class Weapon : MonoBehaviour
 {
-    static public Transform PROJECTILE_ANCHOR;
+    public static Transform PROJECTILE_ANCHOR;
 
     [Header("Set Dynamically")]
     [SerializeField]
@@ -106,6 +107,12 @@ public class Weapon : MonoBehaviour
                 p.rigid.velocity = p.transform.rotation * vel;
                 break;
             case WeaponType.phaser:
+                p = MakeProjectile();
+                p.rigid.velocity = vel;
+                p.leftRight = -1;
+                p = MakeProjectile();
+                p.rigid.velocity = vel;
+                p.leftRight = 1;
                 break;
             case WeaponType.missile:
                 break;
