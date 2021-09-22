@@ -133,9 +133,14 @@ public class Enemy_4 : Enemy
                         }
                     }
                 }
-
-                prtHit.health -= Main.GetWeaponDefinition(p.type).damageOnHit;
-                ShowLocalizedDamage(prtHit.mat);
+                if (p.type == WeaponType.laser) {
+                    prtHit.health -= (Time.time - p.birthTime) * Main.GetWeaponDefinition(p.type).continuousDamage;
+                    ShowLocalizedDamage(prtHit.mat);
+                }
+                else {
+                    prtHit.health -= Main.GetWeaponDefinition(p.type).damageOnHit;
+                    ShowLocalizedDamage(prtHit.mat);
+                }
 
                 if (prtHit.health <= 0) { 
                     prtHit.go.SetActive(false);

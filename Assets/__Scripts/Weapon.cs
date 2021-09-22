@@ -10,6 +10,7 @@ public enum WeaponType {
     none,       // no weapon
     blaster,    // simple blaster
     spread,     // shotgun
+    fan,
     phaser,     // waves of projectiles
     missile,    // homing missiles
     laser,      //
@@ -48,7 +49,8 @@ public class Weapon : MonoBehaviour
     public float lastShotTime;
     private Renderer collarRend;
 
-    private void Start() {
+    private void Start()
+    {
         collar = transform.Find("Collar").gameObject;
         collarRend = collar.GetComponent<Renderer>();
 
@@ -106,6 +108,22 @@ public class Weapon : MonoBehaviour
                 p.transform.rotation = Quaternion.AngleAxis(-10, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 break;
+            case WeaponType.fan:
+                p = MakeProjectile();
+                p.transform.rotation = Quaternion.AngleAxis(14, Vector3.back);
+                p.rigid.velocity = p.transform.rotation * vel;
+                p = MakeProjectile();
+                p.transform.rotation = Quaternion.AngleAxis(7, Vector3.back);
+                p.rigid.velocity = p.transform.rotation * vel;
+                p = MakeProjectile();
+                p.rigid.velocity = vel;
+                p = MakeProjectile();
+                p.transform.rotation = Quaternion.AngleAxis(-7, Vector3.back);
+                p.rigid.velocity = p.transform.rotation * vel;
+                p = MakeProjectile();
+                p.transform.rotation = Quaternion.AngleAxis(-14, Vector3.back);
+                p.rigid.velocity = p.transform.rotation * vel;
+                break;
             case WeaponType.phaser:
                 p = MakeProjectile();
                 p.rigid.velocity = vel;
@@ -117,6 +135,8 @@ public class Weapon : MonoBehaviour
             case WeaponType.missile:
                 break;
             case WeaponType.laser:
+                p = MakeProjectile();
+                p.rigid.velocity = vel;
                 break;
             case WeaponType.shield:
                 break;
@@ -134,7 +154,16 @@ public class Weapon : MonoBehaviour
             go.tag = "ProjectileEnemy";
             go.layer = LayerMask.NameToLayer("ProjectileEnemy");
         }
-        go.transform.position = collar.transform.position;
+
+        if (type == WeaponType.laser)
+        {
+            Vector3 tempPos = collar.transform.position;
+            tempPos.y += 50;
+            go.transform.position = tempPos;
+        } else {
+            go.transform.position = collar.transform.position;
+        }
+
         go.transform.SetParent(PROJECTILE_ANCHOR, true);
         Projectile p = go.GetComponent<Projectile>();
         p.type = type;

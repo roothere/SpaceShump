@@ -553,12 +553,12 @@ MonoBehaviour:
     color: {r: 1, g: 0.65521073, b: 0, a: 1}
     projectilePrefab: {fileID: 4748172048090807787, guid: 13182a383a804c247b2765a407b7188e, type: 3}
     projectileColor: {r: 1, g: 0.654902, b: 0, a: 1}
-    damageOnHit: 1
+    damageOnHit: 0.75
     continuousDamage: 0
     delayBetweenShots: 0.4
     velocity: 50
     maxWeapons: 5
-  - type: 6
+  - type: 7
     letter: O
     color: {r: 0, g: 1, b: 0.5019608, a: 1}
     projectilePrefab: {fileID: 0}
@@ -568,18 +568,38 @@ MonoBehaviour:
     delayBetweenShots: 0
     velocity: 0
     maxWeapons: 0
-  - type: 3
+  - type: 4
     letter: P
     color: {r: 0, g: 0.49274158, b: 1, a: 1}
     projectilePrefab: {fileID: 2548815973009391403, guid: 4dd71b7b0f9ddd24c8761c3381e872bd, type: 3}
     projectileColor: {r: 0, g: 0.49411768, b: 1, a: 1}
-    damageOnHit: 100
+    damageOnHit: 3
     continuousDamage: 0
     delayBetweenShots: 1
+    velocity: 30
+    maxWeapons: 3
+  - type: 3
+    letter: F
+    color: {r: 1, g: 0.3433962, b: 0.67486876, a: 1}
+    projectilePrefab: {fileID: 4748172048090807787, guid: 236f0c9ede721a74a85fe2a1d440d79c, type: 3}
+    projectileColor: {r: 1, g: 0.34509805, b: 0.6745098, a: 1}
+    damageOnHit: 1.5
+    continuousDamage: 0
+    delayBetweenShots: 1.5
     velocity: 40
     maxWeapons: 3
+  - type: 6
+    letter: L
+    color: {r: 0, g: 1, b: 0.9899888, a: 0.5019608}
+    projectilePrefab: {fileID: 4748172048090807787, guid: bf494045b4f01024f95cf5a32708f605, type: 3}
+    projectileColor: {r: 0, g: 1, b: 0.98823535, a: 0.5019608}
+    damageOnHit: 0
+    continuousDamage: 3
+    delayBetweenShots: 0
+    velocity: 4000
+    maxWeapons: 3
   prefabPowerUp: {fileID: 6354594032643082115, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
-  powerUpFrequency: 0100000001000000020000000600000003000000010000000100000001000000010000000100000001000000
+  powerUpFrequency: 010000000100000002000000060000000300000004000000
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,11 +674,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082115, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: m_Name
-      value: PowerUp (1)
+      value: Fan
       objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: type
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: fadeTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: lifeTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: driftMinMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: driftMinMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
@@ -675,7 +711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082112, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082112, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -713,13 +749,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082114, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: m_Text
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082114, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: m_Color.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082115, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: m_Name
-      value: PowerUp
+      value: Blaster
       objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: type
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: fadeTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: lifeTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: driftMinMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: driftMinMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
@@ -872,11 +932,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082115, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: m_Name
-      value: PowerUp (2)
+      value: Laser
       objectReference: {fileID: 0}
     - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
       propertyPath: type
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: fadeTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: lifeTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: driftMinMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354594032643082125, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
+      propertyPath: driftMinMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}

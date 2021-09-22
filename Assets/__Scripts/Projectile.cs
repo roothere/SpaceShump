@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Projectile : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class Projectile : MonoBehaviour
     public Rigidbody        rigid;
     public int              leftRight;
 
-    private float           birthTime;
-    private Vector2         xyStart;
+    public float            birthTime;
+    private Vector2         xStart;
 
     [SerializeField]
     private WeaponType      _type;
@@ -41,10 +42,9 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        if (type == WeaponType.phaser) {
+        if (type == WeaponType.phaser || type == WeaponType.laser) {
             birthTime = Time.time;
-            xyStart.x = transform.position.x;
-            xyStart.y = transform.position.y;
+            xStart.x = transform.position.x;
         }
     }
 
@@ -52,16 +52,25 @@ public class Projectile : MonoBehaviour
         if (bndCheck.offUp) {
             Destroy(gameObject);
         }
-        if (type == WeaponType.phaser) MoveProjectile(xyStart, birthTime);
+        if (type == WeaponType.laser) ChangeLaserBeam(xStart, birthTime);
+        if (type == WeaponType.phaser) MoveSinProjectile(xStart, birthTime);
     }
 
-    public void MoveProjectile(Vector2 xyStart, float birthTime) {
+    public void MoveSinProjectile(Vector2 xStart, float birthTime) {
         Vector3 tempPos = pos;
         float age = Time.time - birthTime;
         float theta = Mathf.PI * age;
         float sin = Mathf.Sin(theta) * leftRight;
-        tempPos.x = xyStart.x + 10*sin;
+        tempPos.x = xStart.x + 10*sin;
         pos = tempPos;
+    }
+
+    public void ChangeLaserBeam(Vector2 xStart, float birthTime) {
+        Vector3 tempPos = pos;
+        float age = Time.time - birthTime;
+        //tempPos.x = xStart.x;
+        pos = tempPos;
+
     }
     /// <summary>
     /// Изменяет скрытое поле _type и устанавливает цвет этого снаряда,

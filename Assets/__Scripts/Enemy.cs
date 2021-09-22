@@ -73,14 +73,17 @@ public class Enemy : MonoBehaviour
         switch (otherGO.tag) {
             case "ProjectileHero":
                 Projectile p = otherGO.GetComponent<Projectile>();
-
                 if (!bndCheck.isOnScreen) {
                     Destroy(otherGO);
                     break;
                 }
-                ShowDamage();
-                health -= Main.GetWeaponDefinition(p.type).damageOnHit;
-                
+                if (p.type == WeaponType.laser) {
+                    ShowDamage();
+                    health -= (Time.time - p.birthTime) * Main.GetWeaponDefinition(p.type).continuousDamage;
+                } else {
+                    ShowDamage();
+                    health -= Main.GetWeaponDefinition(p.type).damageOnHit;
+                }
                 if (health <= 0) {
                     if (!notifiedOfDestruction) {
                         Main.S.ShipDestroyed(this);
@@ -103,6 +106,14 @@ public class Enemy : MonoBehaviour
         showingDamage = true;
         damageDoneTime = Time.time + showDamageDuration;
     }
+
+    /*void ShowContinuousDamage() {
+        foreach (Material m in materials) {
+           m.color = Color.red;
+        }
+        showingDamage = true;
+        damageDoneTime = Time.time +
+    }*/
 
     void UnShowDamage() {
         for (int i = 0; i < materials.Length; i++) {
