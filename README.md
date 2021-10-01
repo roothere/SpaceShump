@@ -4,7 +4,7 @@
 
 ### SPREAD WEAPON
 
-![Spread](https://media0.giphy.com/media/8LdLAPhuNqqqBfHdy8/giphy.gif)
+![Spread](https://im4.ezgif.com/tmp/ezgif-4-3209138c1141.gif)
 
 ## **ENG**
 
