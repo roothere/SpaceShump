@@ -3,11 +3,11 @@
 ###### <p style="text-align: right;">made with Unity3d<p>
 
 ### SPREAD WEAPON
+
 ![Preview](https://media0.giphy.com/media/8LdLAPhuNqqqBfHdy8/giphy.gif)
 ### PHASER WEAPON
+
 ![Preview](https://media3.giphy.com/media/RKpr3lE1yUBsYNrAPC/giphy.gif)
-
-
 
 ## **ENG**
 
@@ -38,12 +38,16 @@ This prototype is implemented following the principles of OOP, in the future it 
 Данный прототип реализован, следуя принципам ООП, в будущем его можно развивать и дополнять новыми механиками без особого труда.
 
 ### LASER WEAPON
+
 ![Preview](https://media1.giphy.com/media/k8xN8rOeUOpByPmill/giphy.gif)
 ### BLASTER WEAPON
+
 ![Preview](https://media2.giphy.com/media/B9tvyB8Y1j6ELI2Sw4/giphy.gif)
 ### FAN WEAPON
+
 ![Preview](https://media4.giphy.com/media/Gbw9kY5mOuSqIiPRfj/giphy.gif)
 ### SHIELD
+
 ![Preview](https://media2.giphy.com/media/YXN8smux2321T5KhSF/giphy.gif)
 
 # <p style="text-align: center;">**GAMEPLAY PREVIEW VIDEO**</p>
