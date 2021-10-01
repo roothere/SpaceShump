@@ -4,6 +4,8 @@
 
 ![Spread](https://media1.tenor.com/images/1968fde6180064b6df065e8893dbb607/tenor.gif?itemid=23288406)
 
+![Spread](https://media1.tenor.com/images/97378c239e761a9e4e16962f4e20c3f0/tenor.gif?itemid=23288597)
+
 ## **ENG**
 
 This game prototype is made using **Unity3D.**
