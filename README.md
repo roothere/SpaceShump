@@ -33,16 +33,6 @@ This prototype is implemented following the principles of OOP, in the future it 
 Данный прототип реализован, следуя принципам ООП, в будущем его можно развивать и дополнять новыми механиками без особого труда.
 
 
-![Laser](https://media1.giphy.com/media/k8xN8rOeUOpByPmill/giphy.gif)
-
-![Blaster](https://media2.giphy.com/media/B9tvyB8Y1j6ELI2Sw4/giphy.gif)
-
-![Fan](https://media4.giphy.com/media/Gbw9kY5mOuSqIiPRfj/giphy.gif)
-
-![Shield](https://media2.giphy.com/media/YXN8smux2321T5KhSF/giphy.gif)
-
-![Phaser](https://media3.giphy.com/media/RKpr3lE1yUBsYNrAPC/giphy.gif)
-
 
 # <p style="text-align: center;">**GAMEPLAY PREVIEW VIDEO**</p>
 
