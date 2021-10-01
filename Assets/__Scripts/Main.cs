@@ -35,6 +35,17 @@ public class Main : MonoBehaviour
         }
     }
 
+/*    public void SpawnCheatPowerUp(WeaponType wT)
+    {
+        WeaponType puType = wT;
+
+        GameObject go = Instantiate(prefabPowerUp) as GameObject;
+        PowerUp pu = go.GetComponent<PowerUp>();
+
+        pu.SetType(puType);
+        pu.transform.position = Hero.S.transform.position;
+    }*/
+
     void Awake() {
         S = this;
         bndCheck = GetComponent<BoundsCheck>();
@@ -64,6 +75,25 @@ public class Main : MonoBehaviour
 
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
     }
+
+/*    public void SpawnCheatEnemy() {
+
+        int ndx = Random.Range(0, prefabEnemies.Length);
+        GameObject go = Instantiate<GameObject>(prefabEnemies[ndx]);
+
+        float enemyPadding = enemyDefaultPadding;
+        if (go.GetComponent<BoundsCheck>() != null) {
+            enemyPadding = Mathf.Abs(go.GetComponent<BoundsCheck>().radius);
+        }
+
+        Vector3 pos = Vector3.zero;
+        float xMin = -bndCheck.camWidth + enemyPadding;
+        float xMax = bndCheck.camWidth - enemyPadding;
+        pos.x = Random.Range(xMin, xMax);
+        pos.y = bndCheck.camHeigth + enemyPadding;
+        go.transform.position = pos;
+
+    }*/
 
     public void DelayedRestart(float delay) {
         Invoke("Restart", delay);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    static public Hero S;
+    public static Hero S;
 
     [Header("Set in Inspector")]
     public float speed = 30;
@@ -30,7 +30,6 @@ public class Hero : MonoBehaviour
         } else {
             Debug.LogError("Hero.Awake() - Попытка создать второй экземпляр Hero.S!");
         }
-        //fireDelegate += TempFire;
         ClearWeapons();
         weapons[0].SetType(WeaponType.blaster);
     }
@@ -49,24 +48,20 @@ public class Hero : MonoBehaviour
         if (Input.GetAxis("Jump") == 1 && fireDelegate != null) {
             fireDelegate();
         }
+
+/*      if (Input.GetKeyDown(KeyCode.Alpha1)) Main.S.SpawnCheatPowerUp(WeaponType.blaster);
+        if (Input.GetKeyDown(KeyCode.Alpha2)) Main.S.SpawnCheatPowerUp(WeaponType.spread);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) Main.S.SpawnCheatPowerUp(WeaponType.fan);
+        if (Input.GetKeyDown(KeyCode.Alpha4)) Main.S.SpawnCheatPowerUp(WeaponType.laser);
+        if (Input.GetKeyDown(KeyCode.Alpha5)) Main.S.SpawnCheatPowerUp(WeaponType.phaser);
+        if (Input.GetKeyDown(KeyCode.Alpha0)) Main.S.SpawnCheatPowerUp(WeaponType.shield);
+        if (Input.GetKeyDown(KeyCode.R)) Main.S.Restart();
+        if (Input.GetKeyDown(KeyCode.T)) Main.S.SpawnCheatEnemy();*/
     }
-
-    /*void TempFire() {
-        GameObject projGO = Instantiate<GameObject>(projectilePrefab);
-        projGO.transform.position = transform.position;
-        Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
-        //rigidB.velocity = Vector3.up * projectileSpeed;
-
-        Projectile proj = projGO.GetComponent<Projectile>();
-        proj.type = WeaponType.blaster;
-        float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
-        rigidB.velocity = Vector3.up * tSpeed;
-    }*/
 
     private void OnTriggerEnter(Collider other) {
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
-        //print("Triggered: " + go.name);
         if (go == lastTriggerGo) {
             return;
         }

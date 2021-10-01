@@ -68,7 +68,6 @@ public class Projectile : MonoBehaviour
     public void ChangeLaserBeam(Vector2 xStart, float birthTime) {
         Vector3 tempPos = pos;
         float age = Time.time - birthTime;
-        //tempPos.x = xStart.x;
         pos = tempPos;
 
     }

@@ -365,7 +365,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e834a8cfde4872e4587844a4ffcab7fb, type: 2}
+  - {fileID: 2100000, guid: 5c3b21974d8b0734c9cf839be6db0acd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -403,8 +403,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926526063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalPosition: {x: 0.3015, y: 1.0675, z: 10}
+  m_LocalScale: {x: 141.51624, y: 90.2269, z: 1.7689528}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -599,7 +599,7 @@ MonoBehaviour:
     velocity: 4000
     maxWeapons: 3
   prefabPowerUp: {fileID: 6354594032643082115, guid: 8a0fd707375b2654db4419b1d841a1a6, type: 3}
-  powerUpFrequency: 010000000100000002000000060000000300000004000000
+  powerUpFrequency: 01000000010000000200000006000000030000000400000007000000
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,6 +732,10 @@ PrefabInstance:
     - target: {fileID: 700449930129713052, guid: ff4e5d48773588a49ba5f49e56815ce1, type: 3}
       propertyPath: _type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743373358238210146, guid: ff4e5d48773588a49ba5f49e56815ce1, type: 3}
+      propertyPath: speed
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3743373358238210148, guid: ff4e5d48773588a49ba5f49e56815ce1, type: 3}
       propertyPath: m_RootOrder

@@ -102,26 +102,26 @@ public class Weapon : MonoBehaviour
                 p = MakeProjectile();
                 p.rigid.velocity = vel;
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(10, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(14, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(-10, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(-14, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 break;
             case WeaponType.fan:
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(14, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(16, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(7, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(8, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 p = MakeProjectile();
                 p.rigid.velocity = vel;
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(-7, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(-8, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(-14, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(-16, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 break;
             case WeaponType.phaser:

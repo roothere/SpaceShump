@@ -48,7 +48,6 @@ public class Enemy : MonoBehaviour
 
         if (bndCheck != null && bndCheck.offDown) {
             Destroy(gameObject);
-            //print("Destroyed!");
         }
     }
 
@@ -57,16 +56,6 @@ public class Enemy : MonoBehaviour
         tempPos.y -= speed * Time.deltaTime;
         pos = tempPos;
     }
-
-    /*private void OnCollisionEnter(Collision collision) {
-        GameObject otherGO = collision.gameObject;
-        if (otherGO.tag == "ProjectileHero") {
-            Destroy(otherGO);
-            Destroy(gameObject);
-        } else {
-            print("Enemy hit by non-ProjectileHero: " + otherGO.name);
-        }
-    }*/
 
     void OnCollisionEnter(Collision collision) {
         GameObject otherGO = collision.gameObject;
@@ -106,14 +95,6 @@ public class Enemy : MonoBehaviour
         showingDamage = true;
         damageDoneTime = Time.time + showDamageDuration;
     }
-
-    /*void ShowContinuousDamage() {
-        foreach (Material m in materials) {
-           m.color = Color.red;
-        }
-        showingDamage = true;
-        damageDoneTime = Time.time +
-    }*/
 
     void UnShowDamage() {
         for (int i = 0; i < materials.Length; i++) {
