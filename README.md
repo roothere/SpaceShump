@@ -6,10 +6,6 @@
 
 ![Spread](https://media0.giphy.com/media/8LdLAPhuNqqqBfHdy8/giphy.gif)
 
-### PHASER WEAPON
-
-![Phaser](https://media3.giphy.com/media/RKpr3lE1yUBsYNrAPC/giphy.gif)
-
 ## **ENG**
 
 This game prototype is made using **Unity3D.**
@@ -38,21 +34,8 @@ This prototype is implemented following the principles of OOP, in the future it 
 
 Данный прототип реализован, следуя принципам ООП, в будущем его можно развивать и дополнять новыми механиками без особого труда.
 
-### LASER WEAPON
 
-![Laser](https://media1.giphy.com/media/k8xN8rOeUOpByPmill/giphy.gif)
 
-### BLASTER WEAPON
-
-![Blaster](https://media2.giphy.com/media/B9tvyB8Y1j6ELI2Sw4/giphy.gif)
-
-### FAN WEAPON
-
-![Fan](https://media4.giphy.com/media/Gbw9kY5mOuSqIiPRfj/giphy.gif)
-
-### SHIELD
-
-![Shield](https://media2.giphy.com/media/YXN8smux2321T5KhSF/giphy.gif)
 
 # <p style="text-align: center;">**GAMEPLAY PREVIEW VIDEO**</p>
 
