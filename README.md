@@ -2,9 +2,10 @@
 
 ###### <p style="text-align: right;">made with Unity3d<p>
 
-![Spread](https://media1.tenor.com/images/1968fde6180064b6df065e8893dbb607/tenor.gif?itemid=23288406)
-
-![Spread](https://media1.tenor.com/images/97378c239e761a9e4e16962f4e20c3f0/tenor.gif?itemid=23288597)
+![Weapon](https://media1.tenor.com/images/1968fde6180064b6df065e8893dbb607/tenor.gif?itemid=23288406)
+![Weapon](https://media1.tenor.com/images/97378c239e761a9e4e16962f4e20c3f0/tenor.gif?itemid=23288597)
+![Weapon](https://media1.tenor.com/images/4fa470389f39690211c40fec4c278c98/tenor.gif?itemid=23288748)
+![Weapon](https://media1.tenor.com/images/13f2f31405d8135f79c9a1c3b9df3868/tenor.gif?itemid=23288704)
 
 ## **ENG**
 
@@ -33,8 +34,6 @@ This prototype is implemented following the principles of OOP, in the future it 
 + Приятный для глаза фон, имитирующий движение.
 
 Данный прототип реализован, следуя принципам ООП, в будущем его можно развивать и дополнять новыми механиками без особого труда.
-
-
 
 # <p style="text-align: center;">**GAMEPLAY PREVIEW VIDEO**</p>
 
